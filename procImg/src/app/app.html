@@ -1,0 +1,58 @@
+<div class="app-container">
+  
+
+  <aside class="lateral">
+    <h1>Processamento de Imagens</h1>
+    <nav class="nav-menu">
+      <button class="nav-btn" [class.active]="abaAtiva === 'principal'" (click)="mudarAba('principal')">Principal</button>
+      <button class="nav-btn" [class.active]="abaAtiva === 'operacoes'" (click)="mudarAba('operacoes')">Operações</button>
+    </nav>
+  </aside>
+
+
+  <main>
+    <!-- Área fixa de visualização das imagens -->
+    <div class="image-grid">
+      <div class="image-block">
+        <h2>Imagem Original</h2>
+        <div class="image-container">
+          <img id="preview-img">
+        </div>
+        <button class="load-btn" (click)="loadImage()">Carregar Imagem</button>
+      </div>
+      <div class="image-block">
+        <h2>Imagem Destino</h2>
+        <div class="image-container">
+          <img id="imagem-destino">
+        </div>
+        <button class="download-btn" (click)="downloadDestino()">Baixar Imagem Destino</button>
+      </div>
+    </div>
+
+    <!-- Área dinâmica de operações -->
+    <ng-container *ngIf="abaAtiva === 'operacoes'">
+      <div class="operacoes-container">
+        <h2>Operações com Imagens</h2>
+        <div class="operacao-bloco">
+          <button class="op-btn" (click)="somarImagens()">Somar Imagem Original + Imagem Destino</button>
+        </div>
+        <div class="operacao-bloco">
+          <label for="constante">Somar constante a cada pixel (brilho):</label>
+          <input id="constante" type="number" [(ngModel)]="constanteBrilho" min="0" max="255" style="width: 80px; margin: 0 8px;">
+          <button class="op-btn" (click)="somarConstante()">Aplicar Brilho</button>
+        </div>
+        <div class="image-grid">
+          <div class="image-block">
+            <h3>Resultado</h3>
+            <div class="image-container">
+              <img id="imagem-operacao">
+            </div>
+            <button class="download-btn" (click)="downloadOperacao()">Baixar Resultado</button>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </main>
+
+<router-outlet></router-outlet>
+</div>

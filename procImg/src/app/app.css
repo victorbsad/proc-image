@@ -1,0 +1,155 @@
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    align-items: center;
+}
+.nav-btn {
+    width: 14rem;
+    background: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.nav-btn.active, .nav-btn:hover {
+    background: #2d7be5;
+    color: #fff;
+}
+
+.operacoes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.operacao-bloco {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.op-btn {
+    background: #2d7be5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.op-btn:hover {
+    background: #1a5bb8;
+}
+.app-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-color: white;
+}
+
+.lateral {
+    width: 30vw;
+    height: 100vh;
+    background-color: lightgray;
+    padding: 12px;
+    columns: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.load-btn {
+    margin-top: 0.5rem;
+    padding: 10px 18px;
+    background: #2d7be5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.navegador {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.image-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 2rem 2rem 1.5rem 2rem;
+    min-width: 320px;
+}
+
+.image-block h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-height: 240px;
+    min-width: 240px;
+    max-width: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 380px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.download-btn {
+    margin-top: 0.5rem;
+    padding: 10px 18px;
+    background: #2d7be5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+.download-btn:hover {
+    background: #1a5bb8;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
